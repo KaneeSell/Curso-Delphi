@@ -11,7 +11,9 @@ object frmPrincipal: TfrmPrincipal
   Font.Name = 'Segoe UI'
   Font.Style = []
   Menu = mainPrincipal
+  Position = poDesigned
   WindowState = wsMaximized
+  OnClose = FormClose
   OnCreate = FormCreate
   TextHeight = 15
   object mainPrincipal: TMainMenu
@@ -27,6 +29,7 @@ object frmPrincipal: TfrmPrincipal
       end
       object Categoria1: TMenuItem
         Caption = 'Categoria'
+        OnClick = Categoria1Click
       end
       object Produto1: TMenuItem
         Caption = 'Produto'

@@ -4,7 +4,7 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, uDTMConexao;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, uDTMConexao, uCadCategoria, Enter;
 
 type
   TfrmPrincipal = class(TForm)
@@ -24,8 +24,11 @@ type
     VendaporData1: TMenuItem;
     procedure mnuFecharClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure Categoria1Click(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
+    TeclaEnter: TMREnter;
   public
     { Public declarations }
   end;
@@ -36,6 +39,19 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TfrmPrincipal.Categoria1Click(Sender: TObject);
+begin
+ frmCadCategoria:=TfrmCadCategoria.Create(Self);
+ frmCadCategoria.ShowModal;   //Mostrar na tela o Modelo do Cadastro de categorias
+ frmCadCategoria.Release;  //esvazia a memoria, essa linha é execultada logo após fehar o cadastro de categorias
+end;
+
+procedure TfrmPrincipal.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+ FreeAndNil (TeclaEnter);
+ FreeAndNil(dtmPrincipal);
+end;
 
 procedure TfrmPrincipal.FormCreate(Sender: TObject);
 begin
@@ -57,11 +73,15 @@ begin
   Protocol:= 'ado';
   LibraryLocation:= 'C:\Users\kanee\OneDrive\Documentos\Curso Delphi\ntwdblib.dll';
   Database:= 'Provider=SQLOLEDB.1;Password=masterkey;Persist Security Info=True;User ID=sa;Initial Catalog=Vendas;Data Source=ISAAC\SERVERCURSO';
-  Port:=1433;
+  Port:=1433;   //Porta padrão
   User:= 'sa';
   Password:= 'masterkey';
   Connected:=True;
  end;
+ TeclaEnter:= TMREnter.Create(Self);
+ TeclaEnter.FocusEnabled:=true;
+ TeclaEnter.FocusColor:=clInfoBK;
+
 end;
 
 procedure TfrmPrincipal.mnuFecharClick(Sender: TObject);

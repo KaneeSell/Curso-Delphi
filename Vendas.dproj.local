@@ -10,7 +10,14 @@
     <Transaction>2024/06/08 14:26:03.000.576,C:\Users\kanee\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\kanee\OneDrive\Documentos\Curso Delphi\uPrincipal.pas</Transaction>
     <Transaction>2024/06/08 14:26:20.000.724,C:\Users\kanee\OneDrive\Documentos\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\kanee\OneDrive\Documentos\Curso Delphi\Vendas.dproj</Transaction>
     <Transaction>2024/06/08 14:34:06.000.211,=C:\Users\kanee\OneDrive\Documentos\Curso Delphi\Unit1.pas</Transaction>
-    <Transaction>2024/06/08 14:34:51.000.265,C:\Users\kanee\OneDrive\Documentos\Curso Delphi\Unit1.pas=C:\Users\kanee\OneDrive\Documentos\Curso Delphi\datamodule\uDTMConexao.pas</Transaction>
     <Transaction>2024/06/08 14:34:51.000.265,C:\Users\kanee\OneDrive\Documentos\Curso Delphi\Unit1.dfm=C:\Users\kanee\OneDrive\Documentos\Curso Delphi\datamodule\uDTMConexao.dfm</Transaction>
+    <Transaction>2024/06/08 14:34:51.000.265,C:\Users\kanee\OneDrive\Documentos\Curso Delphi\Unit1.pas=C:\Users\kanee\OneDrive\Documentos\Curso Delphi\datamodule\uDTMConexao.pas</Transaction>
+    <Transaction>2024/06/08 17:35:36.000.260,=C:\Users\kanee\OneDrive\Documentos\Curso-Delphi\Unit1.pas</Transaction>
+    <Transaction>2024/06/08 17:36:06.000.424,C:\Users\kanee\OneDrive\Documentos\Curso-Delphi\heranca\uTelaHeranca.dfm=C:\Users\kanee\OneDrive\Documentos\Curso-Delphi\Unit1.dfm</Transaction>
+    <Transaction>2024/06/08 17:36:06.000.424,C:\Users\kanee\OneDrive\Documentos\Curso-Delphi\heranca\uTelaHeranca.pas=C:\Users\kanee\OneDrive\Documentos\Curso-Delphi\Unit1.pas</Transaction>
+    <Transaction>2024/06/08 18:14:08.000.257,=C:\Users\kanee\OneDrive\Documentos\Curso-Delphi\Unit1.pas</Transaction>
+    <Transaction>2024/06/08 18:14:46.000.126,C:\Users\kanee\OneDrive\Documentos\Curso-Delphi\Unit1.pas=C:\Users\kanee\OneDrive\Documentos\Curso-Delphi\cadastro\uCadCategoria.pas</Transaction>
+    <Transaction>2024/06/08 18:14:46.000.126,C:\Users\kanee\OneDrive\Documentos\Curso-Delphi\Unit1.dfm=C:\Users\kanee\OneDrive\Documentos\Curso-Delphi\cadastro\uCadCategoria.dfm</Transaction>
+    <Transaction>2024/06/08 18:57:55.000.576,=C:\Users\kanee\OneDrive\Documentos\Curso-Delphi\terceiros\Enter.pas</Transaction>
   </Transactions>
 </BorlandProject>
