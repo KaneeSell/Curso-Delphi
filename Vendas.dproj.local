@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2024/06/05 12:44:17.000.442,=C:\Users\kanee\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/06/05 12:51:15.000.572,=C:\Users\kanee\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/06/05 13:20:52.000.120,=C:\Users\kanee\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/06/08 12:54:39.000.462,=C:\Users\kanee\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/06/08 14:24:29.000.943,=C:\Users\kanee\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/06/08 14:26:03.000.576,C:\Users\kanee\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\kanee\OneDrive\Documentos\Curso Delphi\uPrincipal.dfm</Transaction>
+    <Transaction>2024/06/08 14:26:03.000.576,C:\Users\kanee\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\kanee\OneDrive\Documentos\Curso Delphi\uPrincipal.pas</Transaction>
+    <Transaction>2024/06/08 14:26:20.000.724,C:\Users\kanee\OneDrive\Documentos\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\kanee\OneDrive\Documentos\Curso Delphi\Vendas.dproj</Transaction>
+    <Transaction>2024/06/08 14:34:06.000.211,=C:\Users\kanee\OneDrive\Documentos\Curso Delphi\Unit1.pas</Transaction>
+    <Transaction>2024/06/08 14:34:51.000.265,C:\Users\kanee\OneDrive\Documentos\Curso Delphi\Unit1.pas=C:\Users\kanee\OneDrive\Documentos\Curso Delphi\datamodule\uDTMConexao.pas</Transaction>
+    <Transaction>2024/06/08 14:34:51.000.265,C:\Users\kanee\OneDrive\Documentos\Curso Delphi\Unit1.dfm=C:\Users\kanee\OneDrive\Documentos\Curso Delphi\datamodule\uDTMConexao.dfm</Transaction>
+  </Transactions>
+</BorlandProject>
