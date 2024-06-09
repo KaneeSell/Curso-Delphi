@@ -87,6 +87,7 @@ object frmTelaHeranca: TfrmTelaHeranca
       Height = 25
       Caption = '&Novo'
       TabOrder = 0
+      OnClick = btnNovoClick
     end
     object btnAlterar: TBitBtn
       Left = 120
@@ -95,6 +96,7 @@ object frmTelaHeranca: TfrmTelaHeranca
       Height = 25
       Caption = '&Alterar'
       TabOrder = 1
+      OnClick = btnAlterarClick
     end
     object btnCancelar: TBitBtn
       Left = 208
@@ -103,6 +105,7 @@ object frmTelaHeranca: TfrmTelaHeranca
       Height = 25
       Caption = '&Cancelar'
       TabOrder = 2
+      OnClick = btnCancelarClick
     end
     object btnGravar: TBitBtn
       Left = 296
@@ -111,6 +114,7 @@ object frmTelaHeranca: TfrmTelaHeranca
       Height = 25
       Caption = '&Gravar'
       TabOrder = 3
+      OnClick = btnGravarClick
     end
     object btnApagar: TBitBtn
       Left = 384
@@ -119,6 +123,7 @@ object frmTelaHeranca: TfrmTelaHeranca
       Height = 25
       Caption = 'Apaga&r'
       TabOrder = 4
+      OnClick = btnApagarClick
     end
     object btnFechar: TBitBtn
       Left = 939
