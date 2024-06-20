@@ -3,8 +3,8 @@ object frmTelaHeranca: TfrmTelaHeranca
   Top = 0
   BorderStyle = bsDialog
   Caption = 'Informe Aqui o T'#237'tulo'
-  ClientHeight = 613
-  ClientWidth = 1026
+  ClientHeight = 612
+  ClientWidth = 1010
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -17,23 +17,30 @@ object frmTelaHeranca: TfrmTelaHeranca
   object pgcPrincipal: TPageControl
     Left = 0
     Top = 0
-    Width = 1026
-    Height = 576
+    Width = 1010
+    Height = 575
     ActivePage = tabListagem
     Align = alClient
     TabOrder = 0
-    ExplicitWidth = 1022
-    ExplicitHeight = 575
+    ExplicitWidth = 1018
+    ExplicitHeight = 574
     object tabListagem: TTabSheet
       Caption = 'Listagem'
       object pnlListagemTopo: TPanel
         Left = 0
         Top = 0
-        Width = 1018
+        Width = 1002
         Height = 65
         Align = alTop
         TabOrder = 0
-        ExplicitWidth = 1014
+        ExplicitWidth = 1010
+        object lblIndice: TLabel
+          Left = 7
+          Top = 5
+          Width = 85
+          Height = 15
+          Caption = 'CampoPesquisa'
+        end
         object mskPesquisar: TMaskEdit
           Left = 7
           Top = 22
@@ -54,8 +61,8 @@ object frmTelaHeranca: TfrmTelaHeranca
       object grdListagem: TDBGrid
         Left = 0
         Top = 65
-        Width = 1018
-        Height = 481
+        Width = 1002
+        Height = 480
         Align = alClient
         DataSource = dtsListagem
         TabOrder = 1
@@ -73,13 +80,16 @@ object frmTelaHeranca: TfrmTelaHeranca
   end
   object pnlRodape: TPanel
     Left = 0
-    Top = 576
-    Width = 1026
+    Top = 575
+    Width = 1010
     Height = 37
     Align = alBottom
     TabOrder = 1
-    ExplicitTop = 575
-    ExplicitWidth = 1022
+    ExplicitTop = 574
+    ExplicitWidth = 1018
+    DesignSize = (
+      1010
+      37)
     object btnNovo: TBitBtn
       Left = 32
       Top = 6
@@ -126,13 +136,15 @@ object frmTelaHeranca: TfrmTelaHeranca
       OnClick = btnApagarClick
     end
     object btnFechar: TBitBtn
-      Left = 939
+      Left = 931
       Top = 6
       Width = 75
       Height = 25
+      Anchors = [akTop, akRight]
       Caption = '&Fechar'
       TabOrder = 5
       OnClick = btnFecharClick
+      ExplicitLeft = 943
     end
     object btnNavigator: TDBNavigator
       Left = 465

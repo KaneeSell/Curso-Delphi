@@ -6,7 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.DBCtrls, Vcl.Grids,
   Vcl.DBGrids, Vcl.StdCtrls, Vcl.Buttons, Vcl.Mask, Vcl.ComCtrls, Vcl.ExtCtrls,
-  ZAbstractRODataset, ZAbstractDataset, ZDataset, uDTMConexao;
+  ZAbstractRODataset, ZAbstractDataset, ZDataset, uDTMConexao, uEnum;
 
 type
   TfrmTelaHeranca = class(TForm)
@@ -27,6 +27,7 @@ type
     btnNavigator: TDBNavigator;
     QryListagem: TZQuery;
     dtsListagem: TDataSource;
+    lblIndice: TLabel;
     procedure FormActivate(Sender: TObject);
     procedure btnFecharClick(Sender: TObject);
     procedure btnNovoClick(Sender: TObject);
@@ -36,6 +37,8 @@ type
     procedure btnApagarClick(Sender: TObject);
   private
     { Private declarations }
+    EstadoDoCadastro:TEstadoDoCadastro;
+
     procedure ControlarBotoes(btnNovo, btnCancelar, btnApagar, btnAlterar, btnGravar:TBitBtn; tdbNavigator:TDBNavigator;
                                           pgcPrincipal:TPageControl; Flag:Boolean);
     procedure ControlarIndiceTab(pgcPrincipal:TPageControl; Indice:integer);
@@ -49,6 +52,7 @@ var
 implementation
 
 {$R *.dfm}
+//Procedimento de controle de tela
 procedure TfrmTelaHeranca.ControlarBotoes(btnNovo, btnCancelar, btnApagar, btnAlterar, btnGravar:TBitBtn; tdbNavigator:TDBNavigator;
                                           pgcPrincipal:TPageControl; Flag:Boolean);
  Begin
@@ -71,17 +75,21 @@ end;
 procedure TfrmTelaHeranca.btnAlterarClick(Sender: TObject);
 begin
  ControlarBotoes(btnNovo, btnCancelar, btnApagar, btnAlterar, btnGravar, btnNavigator, pgcPrincipal, false);
+ EstadoDoCadastro:=ecAlterar;
 end;
 
 procedure TfrmTelaHeranca.btnApagarClick(Sender: TObject);
 begin
+ControlarBotoes(btnNovo, btnCancelar, btnApagar, btnAlterar, btnGravar, btnNavigator, pgcPrincipal, true);
  ControlarIndiceTab(pgcPrincipal, 0);
+ EstadoDoCadastro:=ecNenhum;
 end;
 
 procedure TfrmTelaHeranca.btnCancelarClick(Sender: TObject);
 begin
  ControlarBotoes(btnNovo, btnCancelar, btnApagar, btnAlterar, btnGravar, btnNavigator, pgcPrincipal, true);
  ControlarIndiceTab(pgcPrincipal, 0);
+ EstadoDoCadastro:=ecNenhum;
 end;
 
 procedure TfrmTelaHeranca.btnFecharClick(Sender: TObject);
@@ -91,13 +99,24 @@ end;
 
 procedure TfrmTelaHeranca.btnGravarClick(Sender: TObject);
 begin
+Try
  ControlarBotoes(btnNovo, btnCancelar, btnApagar, btnAlterar, btnGravar, btnNavigator, pgcPrincipal, true);
  ControlarIndiceTab(pgcPrincipal, 0);
+ if (EstadoDoCadastro=ecInserir) then
+ showmessage('Inserir')
+ else if (EstadoDoCadastro=ecAlterar) then
+      showmessage('Alterado')
+      else
+      showmessage('Nada Aconteceu');
+ Finally
+  EstadoDoCadastro:=ecNenhum;
+  End;
 end;
 
 procedure TfrmTelaHeranca.btnNovoClick(Sender: TObject);
 begin
  ControlarBotoes(btnNovo, btnCancelar, btnApagar, btnAlterar, btnGravar, btnNavigator, pgcPrincipal, false);
+ EstadoDoCadastro:=ecInserir;
 end;
 
 procedure TfrmTelaHeranca.FormActivate(Sender: TObject);

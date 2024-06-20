@@ -10,6 +10,10 @@ uses
 
 type
   TfrmCadCategoria = class(TfrmTelaHeranca)
+    QryListagemcategoriaId: TIntegerField;
+    QryListagemdescricao: TWideStringField;
+    procedure FormShow(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -22,5 +26,19 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TfrmCadCategoria.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  inherited;
+  QryListagem.Close;
+end;
+
+procedure TfrmCadCategoria.FormShow(Sender: TObject);
+begin
+  inherited;
+  if (QryListagem.SQL.Text<>EmptyStr) then Begin
+   QryListagem.Open;
+  end;
+end;
 
 end.

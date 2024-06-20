@@ -7,6 +7,7 @@ object dtmPrincipal: TdtmPrincipal
     Properties.Strings = (
       'controls_cp=CP_UTF16'
       'AutoEncodeStrings=ON')
+    Connected = True
     SQLHourGlass = True
     HostName = ''
     Port = 0
